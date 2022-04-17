@@ -23,9 +23,7 @@ class Web3Bridge:
         self.external_wallet_address = external_wallet_address
         self.chain = chain
 
-    def send_transaction(self, tx_data, note=None):
-        if not note:
-            note = ''
+    def send_transaction(self, tx_data, note=''):
         # if type(self.external_wallet_id) == EXTERNAL_WALLET:
         #     dest = DestinationTransferPeerPath(EXTERNAL_WALLET, self.external_wallet_id)
         # else:
