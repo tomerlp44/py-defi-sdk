@@ -17,6 +17,7 @@ GREETING = "Hello web3"
 
 def create_contract_call_transaction(bridge: Web3Bridge, tx_data: dict):
     resp = bridge.send_transaction(tx_data)
+    print(resp)
     bridge.check_tx_is_completed(resp["id"])
 
 
