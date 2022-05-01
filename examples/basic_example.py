@@ -1,6 +1,5 @@
-import json
-from pprint import pprint
 import os
+import json
 
 from web3 import Web3
 from web3_bridge import Web3Bridge
@@ -9,6 +8,7 @@ from fireblocks_sdk import FireblocksSDK, TransferPeerPath, TRANSACTION_STATUS_C
     TRANSACTION_MINT, TRANSACTION_BURN, FireblocksApiException, DestinationTransferPeerPath, ONE_TIME_ADDRESS
 
 w3 = Web3(Web3.EthereumTesterProvider())
+print(w3.isConnected())
 CHAIN = Chain.ROPSTEN
 CONTRACT_ADDRESS = Web3.toChecksumAddress("0xcbe74e21b070a979b9d6426b11e876d4cb618daf")
 EIP20_ABI = json.loads('[{"constant":false,"inputs":[{"name":"_greeting","type":"string"}],"name":"greet","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getGreeting","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}]')
